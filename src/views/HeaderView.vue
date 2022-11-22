@@ -3,12 +3,16 @@
 </template>
 
 <script>
+import { JIN } from "@/utils/api";
 export default {
   name: "HeaderView",
   data() {
     return {};
   },
-  created() {},
+  async created() {
+    let res = await JIN();
+    console.log("11", res.data);
+  },
 };
 </script>
 <style lang="scss" scoped></style>
